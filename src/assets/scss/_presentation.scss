@@ -1,0 +1,121 @@
+.presentation {
+  padding: 4rem 1.5rem 0rem 1.5rem;
+  background-color: #f9f9f9;
+  color: #1a1a1a;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__content {
+    h2.presentation__title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: #0f172a; 
+    }
+
+    h3.presentation__subtitle {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      color: #334155; 
+    }
+
+    .presentation__description {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      max-width: 540px;
+    }
+
+    .presentation__list {
+      list-style: disc;
+      padding-left: 1.5rem;
+      max-width: 550px;
+
+
+      li {
+        margin-bottom: 0.8rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+
+        strong {
+          font-weight: 600;
+          color: #0f172a;
+        }
+      }
+    }
+  }
+
+  &__slider {
+    max-width: 300px;
+    margin: 0 auto;
+
+    .presentation__image {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  // === Responsive ===
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__content {
+      flex: 1;
+      padding-right: 2rem;
+    }
+
+    &__slider {
+      flex: 1;
+      max-width: 400px;
+
+      .presentation__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__content h2.presentation__title {
+      font-size: 3rem;
+    }
+
+    &__content h3.presentation__subtitle {
+      font-size: 1.5rem;
+    }
+    &__slider {
+      max-width: 500px;
+      margin: 0 auto;
+  
+      .presentation__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+    }
+
+    .presentation__description {
+      font-size: 1.4rem;
+    }
+
+    .presentation__list li {
+      font-size: 1.2rem;
+    }
+  }
+}

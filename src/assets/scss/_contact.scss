@@ -1,0 +1,133 @@
+.contact {
+  position: relative;
+  padding: 3rem 1.5rem;
+  min-height: 100vh;
+  text-align: center;
+
+  // 🖼️ Image de fond avec superposition blanche
+  background: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.90)),
+    url("/fond.webp") center/cover no-repeat;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 15rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    .icon {
+      color: #165164;
+    }
+  }
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .form-group {
+    position: relative;
+    text-align: left;
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #165164;
+      }
+    }
+
+    &.valid input,
+    &.valid textarea {
+      border-color: #4caf50;
+    }
+
+    &.error input,
+    &.error textarea {
+      border-color: #f44336;
+    }
+
+    .valid-icon,
+    .error-icon {
+      position: absolute;
+      right: 10px;
+      top: 40px;
+      color: #4caf50;
+
+      &.error-icon {
+        color: #f44336;
+      }
+    }
+  }
+
+  button {
+    background-color: #165164;
+    color: #fff;
+    padding: 0.75rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      background-color: #123f4a;
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .spinner {
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  .sent {
+    margin-top: 1rem;
+    color: #4caf50;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+// 🔁 Spinner animation
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

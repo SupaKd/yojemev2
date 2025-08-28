@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; 
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color:#1E2A38;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding: 0;
+}
+
+:root {
+    --color-background: #FFF9F2;
+    --color-primary: #4C7C59;     // vert palmier
+    --color-secondary: #FFD369;   // jaune soleil doux
+    --color-accent: #D88C6F;      // terre argile
+    --color-muted: #F4E1C1;       // sable
+    --color-dark: #1E2A38;        // pour titres foncés
+    --color-text: #7E5A4A;        // texte normal
+    --color-link: #A5D8FF;        // bleu ciel clair
+  }
+  

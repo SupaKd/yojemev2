@@ -1,0 +1,146 @@
+@keyframes sandDrift {
+  0% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  50% {
+    transform: translate(30%, 20%) scale(1.2);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+
+.equipe {
+  position: relative;
+  min-height: 50vh; 
+  padding: 2rem 1rem;
+  text-align: center;
+  overflow: hidden;
+
+  background: 
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.90)),
+  url("/fond.webp") center/cover no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; // centre verticalement
+  align-items: center; // centre horizontalement
+
+  > * {
+    position: relative;
+    z-index: 1;
+    max-width: 900px; // évite que ça s'étale trop large
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-dark);
+  }
+
+  p {
+    color: #1d9d8a;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .equipe__slider {
+    padding-bottom: 2rem;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #01546C;
+    }
+
+    .swiper-pagination-bullet {
+      background: #666;
+
+      &-active {
+        background: var(--color-dark);
+      }
+    }
+  }
+
+  .equipe__card {
+    background: transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #eee;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #111;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #1d9d8a;
+    }
+  }
+
+  .wave-bottom {
+    line-height: 0;
+    overflow: hidden;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 1rem 2rem;
+
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+
+    // Cacher les contrôles Swiper à partir de tablette
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination {
+      display: none !important;
+    }
+
+    .equipe__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 4rem;
+      margin-top: 2rem;
+    }
+
+    // Transformer les slides en une grille responsive
+    .equipe__slider {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding: 0;
+
+      .swiper-slide {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+  }
+}
