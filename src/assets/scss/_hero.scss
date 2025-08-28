@@ -46,8 +46,8 @@
       }
   
       button {
-        background-color: #fff;
-        color: #111;
+        background-color: #199D8A;
+        color: #fff;
         border: none;
         padding: 1.5rem 2rem;
         font-size: 1.3rem;
@@ -56,7 +56,8 @@
         font-weight: 600;
   
         &:hover {
-          background-color: #eee;
+          background-color: #f9f9f9;
+          color: #111;
           transform: translateY(-2px);
         }
   
