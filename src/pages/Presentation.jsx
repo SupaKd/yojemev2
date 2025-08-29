@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-const images = ["img4.webp", "img3.webp"];
+const images = ["img3.webp","img6.jpg", "img7.webp"];
 
 function Presentation() {
   return (

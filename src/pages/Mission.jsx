@@ -18,14 +18,14 @@ function Mission() {
   const cards = [
     {
       icon: <Users size={40} />,
-      title: "Éducation",
+      title: "Jeunesse",
       desc: "Mise en place d’ateliers et d’actions pédagogiques avec des professionnels.",
       bg: "img1webp",
     },
     {
       icon: <Globe size={40} />,
       title: "Partenariats",
-      desc: "Travail avec les entreprises locales pour un impact durable.",
+      desc: "Travail avec les entreprises locales pour une action durable.",
       bg: "part.webp",
     },
   ];

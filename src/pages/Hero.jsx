@@ -8,7 +8,7 @@ function Hero() {
 
       {/* Contenu texte */}
       <div className="hero__content">
-        <h1>Des projets à forger.</h1>
+        <h1>YOJEME : Des projets à forger.</h1>
         <p>
           Conseil - Conception - Ingénierie - Projets
           socio-éducatifs, culturels ou sportifs.
